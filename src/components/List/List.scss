@@ -1,4 +1,7 @@
 .list {
+  &__add-button {
+    opacity: 0.4;
+  }
 
   li {
     display: flex;
@@ -6,6 +9,12 @@
     padding: 10px 12px;
     cursor: pointer;
     margin-bottom: 10px;
+    &:hover {
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+
 
     &.active {
       background: #ffff;
@@ -22,24 +31,5 @@
       }
     }
   }
-  .badge {
-    width: 10px;
-    height: 10px;
-    border-radius: 30px;
-    &--green {
-      background-color: #42b883;
-    }
-    &--blue {
-      background-color: #64c4ed;
-    }
-    &--pink {
-      background-color: #FFBBCC;
-    }
-    &--light-green {
-      background-color: #B6E6BD;
-    }
-    &--grey {
-      background-color: #C9D1D3;
-    }
-  }
+
 }

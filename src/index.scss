@@ -6,6 +6,7 @@
   font-family: 'Roboto', -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 
@@ -28,8 +29,40 @@
     border-radius: 10px;
     border: 1px solid #f1f1f1;
     padding: 60px 20px;
+    height: calc(100% - 120px);
   }
 
 
 }
 
+.button {
+  background: #25ca7f;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+
+
+  &:hover {
+    background: darken(#28e58f, 5%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: darken(#28e58f, 10%);
+  }
+}
+
+.field {
+  background: #ffff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: #dbdbdb;
+  }
+}

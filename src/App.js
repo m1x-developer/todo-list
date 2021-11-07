@@ -1,13 +1,17 @@
 import React from "react";
-import Index from "./components/List/index";
+import List from "./components/List/List";
+import AddButtonList from "./components/AddButtonList/AddButtonList";
+import DB from './assets/db.json'
 
 function App() {
+
+
     return (
         <div className="todo">
             <div className="todo__sidebar">
-                <Index items={[
+
+                <List items={[
                     {
-                        color:'red',
                         icon: <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                    xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -16,25 +20,38 @@ function App() {
                         </svg>
                         ,
                         name: 'Все задачи',
-                        active:true
+                        active: true
                     },
 
                 ]}/>
-                <Index items={[
+
+
+                {/*two */}
+                <List items={[
                     {
-                        color:'green',
+                        color: 'green',
                         name: 'Покупки'
                     },
 
-                ]}/>
-                <Index items={[
+                ]}
+                      isRemobvable
+                />
+
+
+                {/*three*/}
+                <List items={[
                     {
-                        color:'blue',
-                        name: 'front-end'
+                        color: 'blue',
+                        name: 'front-end',
+                        active: true
                     },
 
+
                 ]}/>
+
+                <AddButtonList colors={DB.colors}/>
             </div>
+            {/*tasks*/}
             <div className="todo__tasks">
                 <p>lorem100</p>
             </div>
