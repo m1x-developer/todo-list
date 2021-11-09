@@ -1,10 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import List from "./components/List/List";
 import AddButtonList from "./components/AddButtonList/AddButtonList";
 import DB from './assets/db.json'
+import Tasks from "./components/Tasks/Tasks";
 
 function App() {
-
+    // Установка текущего состояния цвета
+    const [lists, setLists] = useState(
+        DB.lists.map(item => {
+            item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
+            return item;
+        })
+    )
+    // Добавление нового объекта в текущий массим с TO DO
+    const onAddList = obj => {
+        const newList = [...lists, obj]
+        setLists(newList)
+        // console.log(lists,newList)
+    }
 
     return (
         <div className="todo">
@@ -26,34 +39,22 @@ function App() {
                 ]}/>
 
 
-                {/*two */}
-                <List items={[
-                    {
-                        color: 'green',
-                        name: 'Покупки'
-                    },
-
-                ]}
-                      isRemobvable
+                <List
+                    items={lists}
+                    onRemove={(asd) => {
+                        console.log(asd)
+                    }}
+                    isRemovable
                 />
 
-
-                {/*three*/}
-                <List items={[
-                    {
-                        color: 'blue',
-                        name: 'front-end',
-                        active: true
-                    },
-
-
-                ]}/>
-
-                <AddButtonList colors={DB.colors}/>
+                <AddButtonList
+                    onAdd={onAddList}
+                    colors={DB.colors}
+                />
             </div>
-            {/*tasks*/}
+            {/* NEW task */}
             <div className="todo__tasks">
-                <p>lorem100</p>
+                <Tasks/>
             </div>
         </div>
     );

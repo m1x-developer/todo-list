@@ -1,7 +1,8 @@
-.add-list__popup-colors{
+.add-list__popup-colors {
   display: flex;
   justify-content: space-between;
 }
+
 .add-list {
   width: 240px;
 
@@ -15,17 +16,18 @@
     position: relative;
   }
 
-  .add-list__popup-close-btn{
+  .add-list__popup-close-btn {
     position: absolute;
     right: -8px;
-    top:-8px;
+    top: -8px;
     cursor: pointer;
   }
+
   .button {
     width: 100%;
     margin-top: 15px;
-  }
 
+  }
 
 
   .badge {
@@ -33,7 +35,8 @@
     height: 20px;
     margin-top: 15px;
     cursor: pointer;
-    &.active{
+
+    &.active {
       border: 2px solid #69bea9;
     }
   }

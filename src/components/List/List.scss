@@ -1,7 +1,10 @@
 .list {
+  $self: &;
+
   &__add-button {
     opacity: 0.4;
   }
+
 
   li {
     display: flex;
@@ -9,12 +12,29 @@
     padding: 10px 12px;
     cursor: pointer;
     margin-bottom: 10px;
-    &:hover {
-      opacity: 1;
-      transition: 0.3s;
+
+    &:hover #{$self}__remove-icon {
+      opacity: 0.5;
+    }
+
+     #{$self}__remove-icon {
+      opacity: 0;
+       &:hover {
+         opacity: 0.8;
+       }
     }
 
 
+
+    span {
+      flex: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+      transition: 0.3s;
+      border-bottom: white;
+    }
 
     &.active {
       background: #ffff;
@@ -31,5 +51,7 @@
       }
     }
   }
+
+
 
 }
