@@ -6,64 +6,54 @@
   font-family: 'Roboto', -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 
 .todo {
   display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 1200px;
-  height: 800px;
+  width: 750px;
+  height: 530px;
   transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 20px #f3f3f3;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
   font-size: 14px;
 
   &__sidebar {
-    background-color: #E5E5E5;
+    background-color: #f4f6f8;
     width: 200px;
-    height: 100%;
-    border-right: 1px solid #F1F1F1;
-    box-shadow: 1px 2px 11px #f3f3f3;
-    border-radius: 10px;
-    border: 1px solid #f1f1f1;
-    padding: 60px 20px;
     height: calc(100% - 120px);
+    border-right: 1px solid #f1f1f1;
+    padding: 60px 20px;
   }
 
   &__tasks {
     flex: 1;
-    background-color: #fcfcfc;
-    width: 200px;
-    height: 100%;
-    border-right: 1px solid #F1F1F1;
-    box-shadow: 1px 2px 11px #f3f3f3;
-    border-radius: 10px;
-    border: 1px solid #f1f1f1;
-    padding: 60px 20px;
-    height: calc(100% - 120px);
     padding: 60px;
-
   }
 }
 
-
 .button {
-  background: #25ca7f;
+  background: #4dd599;
   border-radius: 4px;
   color: #fff;
   border: 0;
   padding: 10px 20px;
+  cursor: pointer;
 
+  &:hover {
+    background: darken(#4dd599, 6%);
+  }
 
   &:active {
-    background: darken(#28e58f, 10%);
+    background: darken(#4dd599, 10%);
   }
 }
 
 .field {
-  background: #ffff;
+  background: #ffffff;
   border: 1px solid #efefef;
   box-sizing: border-box;
   border-radius: 4px;
