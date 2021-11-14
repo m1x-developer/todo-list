@@ -13,8 +13,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 750px;
-  height: 530px;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 100px);
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 20px #f3f3f3;
   border-radius: 10px;
@@ -32,6 +32,7 @@
   &__tasks {
     flex: 1;
     padding: 60px;
+    overflow: auto;
   }
 }
 
@@ -44,7 +45,6 @@
   cursor: pointer;
   font-size: 14px;
 
-
   &:hover {
     background: darken(#4dd599, 6%);
   }
@@ -52,25 +52,24 @@
   &:active {
     background: darken(#4dd599, 10%);
   }
+
   &:disabled {
     background: #d8d8d8;
   }
 
   &--grey {
-    background-color: #f4f6f8;
-    color: #4444;
+    background: #f4f6f8;
+    color: #444444;
 
     &:hover {
       background: darken(#f4f6f8, 3%);
     }
-  }
 
-  &:active {
-    background: darken(#f4f6f8, 6%);
+    &:active {
+      background: darken(#f4f6f8, 6%);
+    }
   }
-
 }
-
 
 .field {
   background: #ffffff;

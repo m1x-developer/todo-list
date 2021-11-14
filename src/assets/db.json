@@ -19,6 +19,21 @@
       "id": 4,
       "name": "Книги",
       "colorId": 2
+    },
+    {
+      "id": 5,
+      "name": "Личное",
+      "colorId": 1
+    },
+    {
+      "name": "Спорт",
+      "colorId": 3,
+      "id": 6
+    },
+    {
+      "name": "Курс по ReactJS ToDo",
+      "colorId": 7,
+      "id": 7
     }
   ],
   "tasks": [
@@ -26,7 +41,7 @@
       "id": 1,
       "listId": 2,
       "text": "Изучить JavaScript",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
@@ -49,7 +64,7 @@
     {
       "listId": 2,
       "text": "123",
-      "completed": false,
+      "completed": true,
       "id": 5
     },
     {
@@ -67,7 +82,7 @@
     {
       "listId": 1,
       "text": "qweqwe",
-      "completed": false,
+      "completed": true,
       "id": 8
     },
     {
@@ -78,45 +93,39 @@
     },
     {
       "listId": 4,
-      "text": "Купить 1984",
-      "completed": false,
+      "text": "Купить 1984!",
+      "completed": true,
       "id": 10
     },
     {
-      "listId": 4,
-      "text": "йцу",
-      "completed": false,
-      "id": 11
-    },
-    {
       "listId": 2,
-      "text": "123",
-      "completed": false,
+      "text": "222",
+      "completed": true,
       "id": 12
     },
     {
-      "listId": 2,
-      "text": "333",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "listId": 3,
-      "text": "123",
-      "completed": false,
-      "id": 14
-    },
-    {
-      "listId": 1,
-      "text": "123",
-      "completed": false,
+      "listId": 7,
+      "text": "Сделали сайдбар",
+      "completed": true,
       "id": 15
     },
     {
-      "listId": 3,
-      "text": "",
-      "completed": false,
+      "listId": 7,
+      "text": "Сделали список задач",
+      "completed": true,
       "id": 16
+    },
+    {
+      "listId": 7,
+      "text": "Сделали удаление и редактирование задач и списков",
+      "completed": true,
+      "id": 17
+    },
+    {
+      "listId": 8,
+      "text": "tttt",
+      "completed": false,
+      "id": 18
     }
   ],
   "colors": [

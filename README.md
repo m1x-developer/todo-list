@@ -1,4 +1,5 @@
-RUN : npm start
+START PROJECT 
+npm start + npm run fake-json 
 
 **Stack:**
 
